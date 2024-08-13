@@ -1,0 +1,1920 @@
+{
+  "intents": [
+    {
+      "intent": "Agreement",
+      "examples": [
+        {
+          "text": "Correct"
+        },
+        {
+          "text": "yeah"
+        },
+        {
+          "text": "yep"
+        },
+        {
+          "text": "yes"
+        },
+        {
+          "text": "Yesssss"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "bmi",
+      "examples": [
+        {
+          "text": "Can you calculate my bmi?"
+        },
+        {
+          "text": "do you know my bmi?"
+        },
+        {
+          "text": "I want to know my body mass index"
+        },
+        {
+          "text": "What is a good level of bmi?"
+        },
+        {
+          "text": "What is my bmi?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "caloriecalculator",
+      "examples": [
+        {
+          "text": "calorie deficit calculator"
+        },
+        {
+          "text": "Can you calculate my bmr?",
+          "mentions": [
+            {
+              "entity": "healthmetrics",
+              "location": [
+                21,
+                24
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Can you calculcate my calorie deficit?"
+        },
+        {
+          "text": "i want to calculate calorie deficit"
+        },
+        {
+          "text": "i want to calculate my bmr",
+          "mentions": [
+            {
+              "entity": "healthmetrics",
+              "location": [
+                23,
+                26
+              ]
+            }
+          ]
+        },
+        {
+          "text": "i want to calculate my maintenance calories"
+        },
+        {
+          "text": "I want to calculate my tdee",
+          "mentions": [
+            {
+              "entity": "healthmetrics",
+              "location": [
+                23,
+                27
+              ]
+            }
+          ]
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Diet",
+      "examples": [
+        {
+          "text": "Can you give me an easy diet to follow?",
+          "mentions": [
+            {
+              "entity": "Diettype",
+              "location": [
+                24,
+                28
+              ]
+            }
+          ]
+        },
+        {
+          "text": "Can you provide me a diet for my body type?",
+          "mentions": [
+            {
+              "entity": "Diettype",
+              "location": [
+                21,
+                25
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I want a diet plan"
+        },
+        {
+          "text": "I want to eat less carbs",
+          "mentions": [
+            {
+              "entity": "Diettype",
+              "location": [
+                19,
+                24
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I want to eat more protein",
+          "mentions": [
+            {
+              "entity": "Diettype",
+              "location": [
+                19,
+                26
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I want to follow a specific diet plan",
+          "mentions": [
+            {
+              "entity": "Diettype",
+              "location": [
+                28,
+                32
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I want to follow a weight loss diet",
+          "mentions": [
+            {
+              "entity": "Diettype",
+              "location": [
+                31,
+                35
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I want to try out a diet, can you name some?",
+          "mentions": [
+            {
+              "entity": "Diettype",
+              "location": [
+                20,
+                24
+              ]
+            }
+          ]
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Disagreement",
+      "examples": [
+        {
+          "text": "Nah"
+        },
+        {
+          "text": "No"
+        },
+        {
+          "text": "Noooo"
+        },
+        {
+          "text": "Nope"
+        },
+        {
+          "text": "No thanks"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "gainweight",
+      "examples": [
+        {
+          "text": "How can I gain weight healthily?"
+        },
+        {
+          "text": "How do I increase my calorie intake?"
+        },
+        {
+          "text": "I need tips for healthy weight gain."
+        },
+        {
+          "text": "I want to gain weight"
+        },
+        {
+          "text": "Tell me ways to gain weight."
+        },
+        {
+          "text": "What foods should I eat to put on weight?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "General_Ending",
+      "examples": [
+        {
+          "text": "bye"
+        },
+        {
+          "text": "Bye bye"
+        },
+        {
+          "text": "Goodbye"
+        },
+        {
+          "text": "I'm done"
+        },
+        {
+          "text": "See you later"
+        },
+        {
+          "text": "Thanks, bye!"
+        },
+        {
+          "text": "Thank you for your time"
+        },
+        {
+          "text": "Time to go"
+        }
+      ],
+      "description": "End the conversation."
+    },
+    {
+      "intent": "General_Greetings",
+      "examples": [
+        {
+          "text": "Good day"
+        },
+        {
+          "text": "Good evening"
+        },
+        {
+          "text": "Greetings"
+        },
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "Hello I am looking for some help here"
+        },
+        {
+          "text": "Hey how are you doing"
+        },
+        {
+          "text": "Hey there"
+        },
+        {
+          "text": "Hi!"
+        }
+      ],
+      "description": "Greet the bot."
+    },
+    {
+      "intent": "General_Positive_Feedback",
+      "examples": [
+        {
+          "text": "I like what you did there! :)"
+        },
+        {
+          "text": "Thank you"
+        },
+        {
+          "text": "That's a cute bunny!"
+        },
+        {
+          "text": "You are awesome"
+        },
+        {
+          "text": "You are the best"
+        },
+        {
+          "text": "You are wonderful"
+        },
+        {
+          "text": "You've been so helpful :)"
+        }
+      ],
+      "description": "Express positive sentiment or gratitude."
+    },
+    {
+      "intent": "Get_interest",
+      "examples": [
+        {
+          "text": "Can you suggest some workouts?"
+        },
+        {
+          "text": "I want to do cardio"
+        },
+        {
+          "text": "I want to do strength training"
+        },
+        {
+          "text": "I want to work on my waist, can you suggest exercises?"
+        },
+        {
+          "text": "I want to workout"
+        },
+        {
+          "text": "I want workouts with biceps"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Get_name",
+      "examples": [
+        {
+          "text": "My name is Chris",
+          "mentions": [
+            {
+              "entity": "names",
+              "location": [
+                11,
+                16
+              ]
+            }
+          ]
+        },
+        {
+          "text": "My name is Harsh",
+          "mentions": [
+            {
+              "entity": "names",
+              "location": [
+                11,
+                16
+              ]
+            }
+          ]
+        },
+        {
+          "text": "My name is Lela",
+          "mentions": [
+            {
+              "entity": "names",
+              "location": [
+                11,
+                15
+              ]
+            }
+          ]
+        },
+        {
+          "text": "My name is Louis",
+          "mentions": [
+            {
+              "entity": "names",
+              "location": [
+                11,
+                16
+              ]
+            }
+          ]
+        },
+        {
+          "text": "My name is Maithrika",
+          "mentions": [
+            {
+              "entity": "names",
+              "location": [
+                11,
+                20
+              ]
+            }
+          ]
+        },
+        {
+          "text": "My name is Muktika",
+          "mentions": [
+            {
+              "entity": "names",
+              "location": [
+                11,
+                18
+              ]
+            }
+          ]
+        },
+        {
+          "text": "My name is Nunu",
+          "mentions": [
+            {
+              "entity": "names",
+              "location": [
+                11,
+                15
+              ]
+            }
+          ]
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Get_nutrition_information",
+      "examples": [
+        {
+          "text": "Calories in fries"
+        },
+        {
+          "text": "How many calories are there in an apple?"
+        },
+        {
+          "text": "How much fat is there in a beef steak?"
+        },
+        {
+          "text": "how much sugar in a chocolate cake?"
+        },
+        {
+          "text": "I want nutritional info on fries"
+        },
+        {
+          "text": "I want nutritional information"
+        },
+        {
+          "text": "nutritional information on 1lb of beef"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "loseweight",
+      "examples": [
+        {
+          "text": "can you tell me how i can lose weight fast?"
+        },
+        {
+          "text": "i want to lose weight"
+        },
+        {
+          "text": "suggest a healthy way to lose weight"
+        },
+        {
+          "text": "tell me ways to lose weight"
+        },
+        {
+          "text": "tips for weight loss"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "motivation",
+      "examples": [
+        {
+          "text": "I'm feeling discouraged by setbacks in my fitness journey. How can I stay positive and focused?"
+        },
+        {
+          "text": "I'm feeling unmotivated to exercise. How can I stay motivated?",
+          "mentions": [
+            {
+              "entity": "motivated",
+              "location": [
+                12,
+                23
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I'm not seeing the results I want. How can I stay motivated?"
+        },
+        {
+          "text": "I'm struggling to maintain a consistent workout routine. Any tips?",
+          "mentions": [
+            {
+              "entity": "consistency",
+              "location": [
+                29,
+                39
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I need motivation",
+          "mentions": [
+            {
+              "entity": "motivated",
+              "location": [
+                7,
+                17
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I've hit a plateau in my fitness progress. How can I overcome it?",
+          "mentions": [
+            {
+              "entity": "plateau",
+              "location": [
+                11,
+                18
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I've lost my initial motivation for fitness. How can I reignite my passion?",
+          "mentions": [
+            {
+              "entity": "motivated",
+              "location": [
+                21,
+                31
+              ]
+            },
+            {
+              "entity": "motivated",
+              "location": [
+                5,
+                9
+              ]
+            }
+          ]
+        },
+        {
+          "text": "More motivation",
+          "mentions": [
+            {
+              "entity": "motivated",
+              "location": [
+                5,
+                15
+              ]
+            }
+          ]
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "recipes",
+      "examples": [
+        {
+          "text": "can you suggest recipes for chicken?"
+        },
+        {
+          "text": "i. need some pasta recipes"
+        },
+        {
+          "text": "i want a recipe"
+        },
+        {
+          "text": "i want recipes for lamb"
+        },
+        {
+          "text": "i want some recipes"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "animals",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "bird",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "bunny",
+          "synonyms": [
+            "rabbit"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "cat",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "dog",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "consistency",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "consistency",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "consistent",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Diettype",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Atkins Diet",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Carbs",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "diet",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Dukan Diet",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Intermittent Fasting",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Low Carb Diet",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Meditteranean Diet",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Paleo Diet",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Protein",
+          "synonyms": [
+            "Lean Protein"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Vegan Diet",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "gender",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "female",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "male",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "healthmetrics",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "bmi",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "bmr",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "tdee",
+          "synonyms": [
+            "maintenance calories"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "motivated",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "lost",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "lost motivation",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "motivation",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "unmotivated",
+          "synonyms": [
+            "not motivated"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "names",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Chris",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Harsh",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Julia",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Lela",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Louis",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Maithrika",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Muktika",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Nunu",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "plateau",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "plateau",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-date",
+      "values": []
+    },
+    {
+      "entity": "sys-number",
+      "values": []
+    },
+    {
+      "entity": "sys-time",
+      "values": []
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    },
+    "from-sample": true
+  },
+  "webhooks": [
+    {
+      "url": "",
+      "name": "main_webhook",
+      "headers": []
+    }
+  ],
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_7_1709810734655",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Please enter your height in centimeters"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_10_1711432595902",
+      "context": {
+        "values": []
+      },
+      "event_name": "focus",
+      "dialog_node": "handler_10_1711432595904",
+      "previous_sibling": "handler_1_1711432595904"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_7_1711855696101",
+      "context": {
+        "activity_ratio": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_10_1711855696121"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_8_1711419848296",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1711432428815",
+      "previous_sibling": "slot_8_1711432598755"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1711432594583",
+      "context": {
+        "weight": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_1_1711432594584"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1711432595902",
+      "context": {
+        "height": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_1_1711432595904"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1713501887407",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1713501903163",
+      "previous_sibling": "response_8_1713503306029"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1711432598755",
+      "context": {
+        "gender": "@gender"
+      },
+      "conditions": "@gender",
+      "event_name": "input",
+      "dialog_node": "handler_2_1711432598756"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1713501903458",
+      "context": {
+        "weight": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_2_1713501903468"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Enter your height in inches."
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_4_1713501981501",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1713501981502",
+      "previous_sibling": "handler_5_1713501981502"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Let's calculate your BMI. Enter your weight in pounds."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_8_1713501903458",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1713501903468",
+      "previous_sibling": "handler_2_1713501903468"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "values": {
+          "Male": "Male",
+          "Female": "Female"
+        },
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Please enter your gender"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_8_1711432598755",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1711432598756",
+      "previous_sibling": "handler_2_1711432598756"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "\nPlease have a look at the Physical Activity Levels to further calculate your TDEE/Maintenance calories:\n\n1. Sedentary\n   - Physical Activity Ratio: 1.55\n   - Description: Sitting most of the day with no structured exercise\n\n2. Moderately active\n   - Physical Activity Ratio: 1.85\n   - Description:\n     • Sedentary or low active job with 1 hr exercise daily\n     • Active job (moderate movement 8+ hrs per day) but no structured exercise\n\n3. Vigorously active\n   - Physical Activity Ratio: 2.2\n   - Description:\n     • Active job (moderate movement 8+ hours per day) and 1 hr exercise per day\n     • Sedentary or low active job but 2 hours of exercise daily\n\n4. Extremely active\n   - Physical Activity Ratio: 2.4\n   - Description:\n     • Training more than 2 hrs per day\n     • Moderately active job (walking all day) plus at least 1 hr of exercise daily\n\nPlease enter the Physical Activity ratio that aligns with your lifestyle the most."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_7_1711855696101",
+      "event_name": "focus",
+      "dialog_node": "handler_5_1711855696121",
+      "previous_sibling": "handler_10_1711855696121"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1713501981501",
+      "context": {
+        "height": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_5_1713501981502"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1711432597284",
+      "context": {
+        "age": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_6_1711432597286"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sure. Please enter your weight in pounds"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_9_1711432594583",
+      "context": {
+        "values": []
+      },
+      "event_name": "focus",
+      "dialog_node": "handler_8_1711432594584",
+      "previous_sibling": "handler_1_1711432594584"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Please enter your age"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_10_1711432597284",
+      "context": {
+        "values": []
+      },
+      "event_name": "focus",
+      "dialog_node": "handler_8_1711432597286",
+      "previous_sibling": "handler_6_1711432597286"
+    },
+    {
+      "type": "standard",
+      "title": "Nutrition Information",
+      "actions": [
+        {
+          "name": "action_9411",
+          "type": "assistant_action",
+          "parameters": {
+            "input_text": "<? input.text ?>"
+          },
+          "result_variable": "action_result_1",
+          "assistant_action_settings": {
+            "use_global_variables": true,
+            "lookup_action_by_title": false
+          }
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#Get_nutrition_information",
+      "dialog_node": "node_10_1712199001402",
+      "previous_sibling": "node_7_1708740730762"
+    },
+    {
+      "type": "standard",
+      "title": "Positive Feedback",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thanks!"
+              },
+              {
+                "text": "Aww, thank you!"
+              },
+              {
+                "text": "Glad I could help :)"
+              },
+              {
+                "text": "Great!"
+              },
+              {
+                "text": "No problem."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "#General_Positive_Feedback",
+      "dialog_node": "node_1_1709245715761",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "Recipes",
+      "actions": [
+        {
+          "name": "action_9641",
+          "type": "assistant_action",
+          "parameters": {
+            "recipe": "<? input.text ?>"
+          },
+          "result_variable": "action_result_1",
+          "assistant_action_settings": {
+            "use_global_variables": true,
+            "lookup_action_by_title": false
+          }
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#recipes",
+      "dialog_node": "node_1_1711410342372",
+      "previous_sibling": "node_5_1713503379346"
+    },
+    {
+      "type": "standard",
+      "title": "Motivation",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#motivation",
+      "dialog_node": "node_2_1712100538255",
+      "previous_sibling": "node_1_1711410342372"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Okay then, let me know if I can help you with anything else!"
+              },
+              {
+                "text": "Alright, need help with anything else?"
+              },
+              {
+                "text": "Cool. Let me know if you need assistance with anything else."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "#Disagreement",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_3_1715210899962",
+      "previous_sibling": "node_5_1715037155209"
+    },
+    {
+      "type": "standard",
+      "title": "Gain Weight",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "To gain weight in a healthy manner, it's important to focus on a balanced diet and regular strength training exercises. Consider increasing your calorie intake by consuming nutrient-rich foods like avocados, nuts, whole grains, and lean proteins. Remember, gaining weight safely is about quality nutrition and consistent exercise.\n"
+              },
+              {
+                "text": "Gaining weight requires a calorie surplus, but it's crucial to do it healthily. Opt for calorie-dense foods like olive oil, cheese, and fatty fish. Incorporating strength training exercises into your routine can help build muscle mass, contributing to healthy weight gain. It's always best to consult a healthcare provider or dietitian to ensure you're gaining weight in a manner that supports your overall health.\n"
+              },
+              {
+                "text": "To achieve weight gain effectively, focus on increasing your daily calorie intake by about 250-500 calories per day. Choose nutrient-dense foods such as fruits, vegetables, whole grains, and lean proteins to meet your increased energy needs. Additionally, participating in resistance training exercises can help you build muscle mass. \n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          },
+          {
+            "values": [
+              {
+                "text": "You can calculate your maintenance calories, check for suitable exercises and look up nutritional information of food items here too. Simply ask for questions you want the answers to on this chat."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "You can also check out this link for additional information."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "source": "https://www.healthline.com/nutrition/how-to-gain-weight",
+            "response_type": "iframe"
+          }
+        ]
+      },
+      "conditions": "#gainweight",
+      "dialog_node": "node_4_1708807312209",
+      "previous_sibling": "node_2_1712100538255"
+    },
+    {
+      "type": "standard",
+      "title": "Workout type",
+      "actions": [
+        {
+          "name": "action_21569",
+          "type": "assistant_action",
+          "parameters": {
+            "bodypart": "<? input.text ?>"
+          },
+          "result_variable": "action_result_1",
+          "assistant_action_settings": {
+            "use_global_variables": true,
+            "lookup_action_by_title": false
+          }
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#Get_interest",
+      "dialog_node": "node_5_1709749325409",
+      "previous_sibling": "node_10_1712199001402"
+    },
+    {
+      "type": "folder",
+      "title": "Health Metrics",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_5_1713503379346",
+      "previous_sibling": "node_6_1709772023438"
+    },
+    {
+      "type": "standard",
+      "title": "Lose weight",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "To embark on a successful weight loss journey, it's crucial to prioritize a balanced diet and regular physical activity. Start by incorporating plenty of fruits, vegetables, lean proteins, and whole grains into your meals. Additionally, aim to engage in regular exercise routines such as cardio and strength training. Remember, sustainable weight loss is achieved through healthy lifestyle changes! 🥦🏋️‍♂️"
+              },
+              {
+                "text": "When it comes to losing weight effectively, focusing on a combination of healthy eating habits and regular exercise is key. Try incorporating more fiber-rich foods, such as fruits, vegetables, and whole grains, into your diet while reducing your intake of processed foods and sugary snacks. Pair this with consistent physical activity, such as brisk walking, jogging, or cycling, to help you reach your weight loss goals. Remember, small, sustainable changes lead to long-term success! 🥗🚴‍♀️"
+              },
+              {
+                "text": "Embarking on a journey to lose weight requires commitment to healthy lifestyle changes. Start by creating a balanced meal plan that includes plenty of vegetables, lean proteins, and whole grains, while limiting added sugars and unhealthy fats. Incorporating regular exercise, such as aerobic activities and strength training, can further support your weight loss efforts. Remember, it's about making sustainable changes that you can maintain in the long run! 🍽️💪"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          },
+          {
+            "values": [
+              {
+                "text": "You can also look for nutritional information on food items, check out targeted exercises, look up recipes for meals and calculate your tdee/calorie deficit to help you get started out! Just ask questions to the answers you're looking for!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "You can also check out this link for additional information."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "source": "https://www.healthline.com/nutrition/how-to-lose-weight-as-fast-as-possible",
+            "response_type": "iframe"
+          }
+        ]
+      },
+      "conditions": "#loseweight",
+      "dialog_node": "node_5_1715037155209",
+      "previous_sibling": "node_4_1708807312209"
+    },
+    {
+      "type": "standard",
+      "title": "Diet Type",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sure! Here are some diets you could try out."
+              },
+              {
+                "text": "Alright. Here's a list of different diets you can inculcate into your daily life."
+              },
+              {
+                "text": "Okay! Have a look at these different diet types."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          },
+          {
+            "values": [
+              {
+                "text": "Atkins Diet"
+              },
+              {
+                "text": "Dukan Diet"
+              },
+              {
+                "text": "Intermittent Fasting"
+              },
+              {
+                "text": "Low Carb Diet"
+              },
+              {
+                "text": "Paleo Diet"
+              },
+              {
+                "text": "Vegan Diet"
+              },
+              {
+                "text": "The HCG Diet"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "values": [
+              {
+                "text": "For a detailed description of each of these diets, refer to this:"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "source": "https://www.healthline.com/nutrition/9-weight-loss-diets-reviewed",
+            "response_type": "iframe"
+          }
+        ]
+      },
+      "conditions": "#Diet",
+      "dialog_node": "node_6_1709772023438",
+      "previous_sibling": "node_5_1709749325409"
+    },
+    {
+      "type": "standard",
+      "title": "Name",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hi @names. What can I help you with today?"
+              },
+              {
+                "text": "Hello there @names! What can I do for you today?"
+              },
+              {
+                "text": "Welcome @names. What is the purpose of you visit here?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "@names && #Get_name",
+      "dialog_node": "node_7_1708740730762",
+      "previous_sibling": "node_1_1709245715761"
+    },
+    {
+      "type": "standard",
+      "title": "End Conversation",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Alright. Goodbye!"
+              },
+              {
+                "text": "Adios Amigos."
+              },
+              {
+                "text": "Au revoir!"
+              },
+              {
+                "text": "Okay. Bye!"
+              },
+              {
+                "text": "Bye!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "#General_Ending",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_7_1709810734655",
+      "previous_sibling": "node_3_1715210899962"
+    },
+    {
+      "type": "frame",
+      "title": "Calculating TDEE/Maintenance Calories/Calorie Deficit Surplus",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Your Total Daily Energy Expenditure (TDEE) or Maintenance Calories is: <? ((context.bmr * context.activity_ratio)) ?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Great! Understanding your Maintenance Calories allows you to set the right calorie intake level for weight loss or weight gain goals. \nKeep in mind that 1 kilogram of body fat is roughly equivalent to 7,700 calories.\n\nFor Weight Loss:\n- A daily calorie deficit of 500 calories leads to a weekly deficit of 3,500 calories.\n- A daily calorie deficit of 700 calories results in a weekly deficit of 4,900 calories.\n\nThese deficits should be achieved through a combination of reducing calorie intake and increasing physical activity. Accurate calorie tracking, including measuring and weighing your food portions, is essential for precise calculations.\n\nFor Weight Gain:\n- A daily calorie surplus of 500 calories results in a weekly surplus of 3,500 calories.\n- A daily calorie surplus of 700 calories leads to a weekly surplus of 4,900 calories.\n\nWhen aiming for weight gain, focus on consuming nutrient-dense foods and engaging in strength training exercises to build muscle mass effectively.\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1713503379346",
+      "context": {},
+      "conditions": "#Agreement",
+      "dialog_node": "node_7_1711439314912",
+      "previous_sibling": "node_8_1711419848296"
+    },
+    {
+      "type": "frame",
+      "title": "BMI calculation",
+      "parent": "node_5_1713503379346",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#bmi",
+      "dialog_node": "node_7_1713501887407",
+      "previous_sibling": "node_7_1711439314912"
+    },
+    {
+      "type": "frame",
+      "title": "Calculating bmr only",
+      "parent": "node_5_1713503379346",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#caloriecalculator",
+      "dialog_node": "node_8_1711419848296"
+    },
+    {
+      "type": "response_condition",
+      "parent": "node_5_1709749325409",
+      "conditions": "anything_else",
+      "dialog_node": "response_10_1709749375948"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Your Basal Metabolic Rate (BMR) is: <? ((context.weight * 10) + (context.height * 6.25) - (context.age * 5) + 5) ?> "
+              },
+              {
+                "text": "Would you like to continue to find out your TDEE/Maintenance calories?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_8_1711419848296",
+      "context": {
+        "bmr": "<? ((context.weight * 10) + (context.height * 6.25) - (context.age * 5) + 5) ?>"
+      },
+      "conditions": "@gender:male",
+      "dialog_node": "response_1_1711433964967"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Your Basal Metabolic Rate (BMR) is: <? ((context.weight * 10) + (context.height * 6.25) - (context.age * 5) - 161) ?>"
+              },
+              {
+                "text": "Would you like to continue to find out your TDEE/Maintenance calories?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_8_1711419848296",
+      "context": {
+        "bmr": "<? ((context.weight * 10) + (context.height * 6.25) - (context.age * 5) - 161) ?>"
+      },
+      "conditions": "@gender:female",
+      "dialog_node": "response_1_1711434301721",
+      "previous_sibling": "response_1_1711433964967"
+    },
+    {
+      "type": "response_condition",
+      "parent": "node_10_1712199001402",
+      "conditions": "anything_else",
+      "dialog_node": "response_2_1712199030148"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Alright. Goodbye!"
+              },
+              {
+                "text": "Adios Amigos."
+              },
+              {
+                "text": "Au revoir!"
+              },
+              {
+                "text": "Okay. Bye!"
+              },
+              {
+                "text": "Bye!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "parent": "node_7_1709810734655",
+      "disabled": true,
+      "dialog_node": "response_4_1709810904583"
+    },
+    {
+      "type": "response_condition",
+      "parent": "node_1_1711410342372",
+      "conditions": "anything_else",
+      "dialog_node": "response_5_1711410455643"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Staying motivated can be challenging, but setting specific goals, finding an exercise you enjoy, and tracking your progress can help keep you motivated and committed to your fitness journey"
+              },
+              {
+                "text": "Remember that fitness is a journey, and results take time. Celebrating small victories, focusing on non-scale victories, and adjusting your goals and strategies can help you stay motivated and committed."
+              },
+              {
+                "text": "To reignite your passion for fitness, try setting new goals, exploring new workout styles or activities, joining fitness communities for support and inspiration, and reminding yourself of the reasons why you started your fitness journey"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          },
+          {
+            "source": "https://assets.sweat.com/html_body_blocks/images/000/013/215/original/8_Motivational_Quote_1024x683_6_en2cfe57e6377a96a308d41791c61f0f38.jpg?1675227727",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_2_1712100538255",
+      "conditions": "@motivated",
+      "dialog_node": "response_5_1712209982425",
+      "previous_sibling": "response_6_1712100739793"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Consistency is key in fitness, so scheduling workouts like appointments, finding a workout buddy for accountability, and creating a realistic and sustainable routine can help you stay on track."
+              },
+              {
+                "text": "Setbacks are a natural part of any journey, including fitness. To stay positive and focused, practice self-compassion, learn from setbacks, adapt your approach as needed, and remember that each day is a new opportunity to make progress and improve."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          },
+          {
+            "source": "https://www.realsimple.com/thmb/XvMmuDa_9YdcbDUc1Kxf_r_iioY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/02_MotivationalQuote_Rock-15ac6443e247490b9602a0b7b5628419.jpg",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_2_1712100538255",
+      "conditions": "@consistency",
+      "dialog_node": "response_5_1712210306173",
+      "previous_sibling": "response_5_1712209982425"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Plateaus are common, but mixing up your workouts, trying new exercises, and focusing on proper nutrition can help you break through and continue making progress."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "source": "https://bod-blog-assets.prod.cd.beachbodyondemand.com/bod-blog/wp-content/uploads/2022/04/22145140/motivational-workout-quotes-jerry-rice.png",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_2_1712100538255",
+      "conditions": "@plateau",
+      "dialog_node": "response_6_1712100739793"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Your BMI (Body Mass index) is  <? ((context.weight) / ((context.height) * (context.height))) * 703 ?>. You might be underweight."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1713501887407",
+      "conditions": "(($weight)/ (($height) * ($height))) * 703 < 18.5 && (($weight)/ (($height) * ($height))) * 703 > 0",
+      "dialog_node": "response_6_1713502844524"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Your BMI (Body Mass index) is  <? ((context.weight) / ((context.height) * (context.height))) * 703 ?>. You might be overweight."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1713501887407",
+      "conditions": "(($weight)/ (($height) * ($height))) * 703 <= 25",
+      "dialog_node": "response_8_1713503306029",
+      "previous_sibling": "response_9_1713503196977"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Your BMI (Body Mass index) is  <? ((context.weight) / ((context.height) * (context.height))) * 703 ?>. Your weight is normal."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1713501887407",
+      "conditions": "(($weight)/ (($height) * ($height))) * 703 > 18.5 && (($weight)/ (($height) * ($height))) * 703 < 24.9",
+      "dialog_node": "response_9_1713503196977",
+      "previous_sibling": "response_6_1713502844524"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_8_1711419848296",
+      "variable": "$height",
+      "dialog_node": "slot_10_1711432595902",
+      "previous_sibling": "slot_9_1711432594583"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_8_1711419848296",
+      "variable": "$age",
+      "dialog_node": "slot_10_1711432597284",
+      "previous_sibling": "slot_10_1711432595902"
+    },
+    {
+      "type": "slot",
+      "parent": "node_7_1713501887407",
+      "variable": "$height",
+      "dialog_node": "slot_4_1713501981501",
+      "previous_sibling": "slot_8_1713501903458"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_7_1711439314912",
+      "variable": "$activity_ratio",
+      "dialog_node": "slot_7_1711855696101"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_8_1711419848296",
+      "variable": "$gender",
+      "dialog_node": "slot_8_1711432598755",
+      "previous_sibling": "slot_10_1711432597284"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_7_1713501887407",
+      "variable": "$weight",
+      "dialog_node": "slot_8_1713501903458",
+      "previous_sibling": "handler_1_1713501903163"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_8_1711419848296",
+      "variable": "$weight",
+      "dialog_node": "slot_9_1711432594583",
+      "previous_sibling": "response_1_1711434301721"
+    },
+    {
+      "type": "standard",
+      "title": "Greetings",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello. How can I help you?"
+              },
+              {
+                "text": "Hi there! How may I assist you today?"
+              },
+              {
+                "text": "Hi! I am your Coach Bot here to assist you."
+              },
+              {
+                "text": "Aloha! What can I do for you today?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          },
+          {
+            "source": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/9f62ad83883387.5d4a3763e7253.gif",
+            "response_type": "image"
+          }
+        ]
+      },
+      "conditions": "#General_Greetings",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "nlp": {
+      "model": "latest"
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 3,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above."
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "language": "en",
+  "description": "created for assistant 48db9e3f-baa9-4114-ab76-ae7ae0f230fa",
+  "name": "MyCoachBot-dialog"
+}

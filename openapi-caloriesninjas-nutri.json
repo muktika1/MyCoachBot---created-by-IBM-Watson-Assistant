@@ -1,0 +1,130 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Nutritional Data",
+    "description": "The Nutrition API extracts nutrition information from text using natural language processing. From food blogs to menus to recipes, it can read any text and calculate the corresponding nutrition data.\n\nAn intelligent feature of this API is custom portioning: if your text specifies quantities of individual food items or ingredients, the algorithm will automatically scale the nutrition data in the result accordingly.",
+    "version": "1.0.11"
+  },
+  "servers": [
+    {
+      "url": "https://api.calorieninjas.com"
+    }
+  ],
+  "tags": [
+    {
+      "name": "nutrition",
+      "description": "nutritional information"
+    }
+  ],
+  "paths": {
+    "/v1/nutrition": {
+      "get": {
+        "tags": [
+          "nutrition"
+        ],
+        "summary": "Get a detailed list of nutrition information for each item from an input text query.",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "description": "A string containing food or drink items. If you wish to calculate a specific quantity, you may prefix a quantity before an item",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A list of nutrition information extracted from the given text",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Nutrition"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid value"
+          }
+        },
+        "security": [
+          {
+            "APIKeyAuth": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Nutrition": {
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "fries"
+          },
+          "calories": {
+            "type": "number",
+            "example": 317.7
+          },
+          "serving_size_g": {
+            "type": "number",
+            "example": 100
+          },
+          "fat_total_g": {
+            "type": "number",
+            "example": 14.8
+          },
+          "fat_saturated_g": {
+            "type": "number",
+            "example": 2.3
+          },
+          "protein_g": {
+            "type": "number",
+            "example": 3.4
+          },
+          "sodium_mg": {
+            "type": "number",
+            "example": 212
+          },
+          "potassium_mg": {
+            "type": "number",
+            "example": 124
+          },
+          "cholesterol_mg": {
+            "type": "number",
+            "example": 0
+          },
+          "carbohydrates_total_g": {
+            "type": "number",
+            "example": 41.1
+          },
+          "fiber_g": {
+            "type": "number",
+            "example": 3.8
+          },
+          "sugar_g": {
+            "type": "number",
+            "example": 0.3
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "APIKeyAuth": {
+        "type": "apiKey",
+        "name": "X-Api-Key",
+        "in": "header"
+      }
+    }
+  }
+}

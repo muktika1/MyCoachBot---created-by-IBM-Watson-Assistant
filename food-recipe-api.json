@@ -1,0 +1,157 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Food Recipes API",
+    "description": "The Food Recipes API provides access to a variety of recipes with images.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://food-recipes-with-images.p.rapidapi.com"
+    }
+  ],
+  "tags": [
+    {
+      "name": "recipe"
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "tags": [
+          "recipe"
+        ],
+        "description": "Get a list of recipes for a given search query.",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The search query for recipes."
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 5
+            },
+            "description": "The maximum number of recipes to return. Defaults to 5 if not provided."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "s": {
+                      "type": "integer",
+                      "example": 1
+                    },
+                    "d": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Recipe"
+                      }
+                    },
+                    "t": {
+                      "type": "integer",
+                      "example": 5
+                    },
+                    "p": {
+                      "type": "object",
+                      "properties": {
+                        "limitstart": {
+                          "type": "integer",
+                          "example": 0
+                        },
+                        "limit": {
+                          "type": "integer",
+                          "example": 5
+                        },
+                        "total": {
+                          "type": "integer",
+                          "example": 5
+                        },
+                        "pagesStart": {
+                          "type": "integer",
+                          "example": 1
+                        },
+                        "pagesStop": {
+                          "type": "integer",
+                          "example": 1
+                        },
+                        "pagesCurrent": {
+                          "type": "integer",
+                          "example": 1
+                        },
+                        "pagesTotal": {
+                          "type": "integer",
+                          "example": 1
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        },
+        "security": [
+          {
+            "APIKeyAuth": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Recipe": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "3792"
+          },
+          "Title": {
+            "type": "string",
+            "example": "Lemon Herb Chicken Burgers with Thousand Island Dressing"
+          },
+          "Ingredients": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            },
+            "example": "{\n  \"1\": \"1 pound pasture-raised, skinless, boneless chicken breast, cut into large chunks\",\n  \"2\": \"1 medium onion, diced\",\n  ...\n}"
+          },
+          "Instructions": {
+            "type": "string",
+            "example": "First, make the dressing. In a blender, purée the tomatoes..."
+          },
+          "Image": {
+            "type": "string",
+            "example": "//20fix.com/xfood/img/lemon-herb-chicken-burgers-with-thousand-island-dressing-56389605.jpg"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "APIKeyAuth": {
+        "type": "apiKey",
+        "name": "X-RapidAPI-Key",
+        "in": "header"
+      }
+    }
+  }
+}

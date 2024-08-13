@@ -1,0 +1,143 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Exercise Database API",
+    "description": "Provides access to a variety of exercises based on muscle groups, equipment, and intensity levels.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://exercisedb.p.rapidapi.com"
+    }
+  ],
+  "tags": [
+    {
+      "name": "exercise"
+    }
+  ],
+  "paths": {
+    "/exercises/bodyPart/{bodyPart}": {
+      "get": {
+        "tags": [
+          "exercise"
+        ],
+        "description": "Retrieves a list of exercises targeting the specified body part.",
+        "parameters": [
+          {
+            "name": "bodyPart",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The body part targeted by the exercise."
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Exercise"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No exercises found for the specified body part"
+          }
+        },
+        "security": [
+          {
+            "APIKeyAuth": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Exercise": {
+        "type": "object",
+        "properties": {
+          "bodyPart": {
+            "type": "string",
+            "example": "cardio",
+            "description": "The body part targeted by the exercise."
+          },
+          "equipment": {
+            "type": "string",
+            "example": "body weight",
+            "description": "The equipment required for the exercise."
+          },
+          "gifUrl": {
+            "type": "string",
+            "example": "https://v2.exercisedb.io/image/kP7PzqOXAIsfeH",
+            "description": "The URL to a GIF demonstrating the exercise."
+          },
+          "id": {
+            "type": "string",
+            "example": 3220,
+            "description": "The unique identifier for the exercise."
+          },
+          "name": {
+            "type": "string",
+            "example": "astride jumps (male)",
+            "description": "The name of the exercise."
+          },
+          "target": {
+            "type": "string",
+            "example": "cardiovascular system",
+            "description": "The primary target of the exercise."
+          },
+          "secondaryMuscles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "example": [
+              "quadriceps",
+              "hamstrings",
+              "calves"
+            ],
+            "description": "The secondary muscles engaged during the exercise."
+          },
+          "instructions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "example": [
+              "Stand with your feet shoulder-width apart.",
+              "Bend your knees and lower your body into a squat position.",
+              "Jump explosively upwards, extending your legs and arms.",
+              "While in the air, spread your legs apart and bring your arms out to the sides.",
+              "Land softly with your feet shoulder-width apart, bending your knees to absorb the impact.",
+              "Repeat for the desired number of repetitions."
+            ],
+            "description": "The step-by-step instructions for performing the exercise."
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "APIKeyAuth": {
+        "type": "apiKey",
+        "name": "X-RapidAPI-Key",
+        "in": "header"
+      }
+    }
+  }
+}

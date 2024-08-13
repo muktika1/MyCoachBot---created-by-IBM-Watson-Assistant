@@ -1,0 +1,1066 @@
+{
+  "name": "MyCoachBot-action",
+  "type": "action",
+  "valid": true,
+  "status": "Available",
+  "created": "2024-02-23T23:42:47.720Z",
+  "updated": "2024-04-19T02:11:44.478Z",
+  "language": "en",
+  "skill_id": "5b6f96b6-f4ef-42b8-8eb7-c843809a6c41",
+  "workspace": {
+    "actions": [
+      {
+        "type": "standard",
+        "steps": [
+          {
+            "step": "step_478",
+            "context": {
+              "variables": [
+                {
+                  "value": {
+                    "expression": "input.text"
+                  },
+                  "skill_variable": "input_text"
+                }
+              ]
+            },
+            "handlers": [],
+            "resolver": {
+              "type": "callout",
+              "callout": {
+                "path": "/v1/exercises",
+                "type": "integration_interaction",
+                "method": "GET",
+                "internal": {
+                  "spec_hash_id": "017af50dddc236aaeb67b6ca0ff964dd288b4ba50d2fbf4a8a19c01d28e6f035",
+                  "catalog_item_id": "0c9553bd-efe7-4952-a993-176f62f765e4"
+                },
+                "request_mapping": {
+                  "query": [
+                    {
+                      "value": {
+                        "expression": "input.text"
+                      },
+                      "parameter": "type"
+                    },
+                    {
+                      "value": {
+                        "expression": "input.text"
+                      },
+                      "parameter": "muscle"
+                    },
+                    {
+                      "value": {
+                        "expression": "input.text"
+                      },
+                      "parameter": "difficulty"
+                    }
+                  ]
+                },
+                "result_variable": "step_478_result_1"
+              }
+            },
+            "variable": "step_478",
+            "next_step": "step_820"
+          },
+          {
+            "step": "step_820",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": ""
+                          },
+                          {
+                            "variable": "step_478_result_1",
+                            "variable_path": "body"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                }
+              ]
+            },
+            "handlers": [],
+            "resolver": {
+              "type": "continue"
+            },
+            "variable": "step_820"
+          }
+        ],
+        "title": "I want to workout",
+        "action": "action_15252",
+        "boosts": [],
+        "handlers": [],
+        "condition": {
+          "intent": "action_15252_intent_10728"
+        },
+        "variables": [
+          {
+            "title": "No response",
+            "privacy": {
+              "enabled": false
+            },
+            "variable": "step_478",
+            "data_type": "any"
+          },
+          {
+            "privacy": {
+              "enabled": false
+            },
+            "variable": "step_478_result_1",
+            "data_type": "any"
+          },
+          {
+            "title": "{variable}",
+            "privacy": {
+              "enabled": false
+            },
+            "variable": "step_820",
+            "data_type": "any"
+          }
+        ],
+        "launch_mode": "learning",
+        "next_action": "action_9411",
+        "topic_switch": {
+          "allowed_from": true,
+          "allowed_into": true,
+          "never_return": false
+        },
+        "disambiguation_opt_out": false
+      },
+      {
+        "type": "standard",
+        "steps": [
+          {
+            "step": "step_755",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": "Sure! Here's what you asked for:"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                }
+              ]
+            },
+            "context": {
+              "variables": [
+                {
+                  "value": {
+                    "scalar": "input.text"
+                  },
+                  "skill_variable": "input_text"
+                }
+              ]
+            },
+            "handlers": [],
+            "resolver": {
+              "type": "callout",
+              "callout": {
+                "path": "/v1/recipe",
+                "type": "integration_interaction",
+                "method": "GET",
+                "internal": {
+                  "spec_hash_id": null,
+                  "catalog_item_id": null
+                },
+                "request_mapping": {
+                  "query": [
+                    {
+                      "value": {
+                        "expression": "input.text"
+                      },
+                      "parameter": "query"
+                    }
+                  ]
+                },
+                "result_variable": "step_755_result_1"
+              }
+            },
+            "variable": "step_755",
+            "next_step": "step_317"
+          },
+          {
+            "step": "step_317",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": "The recipe for "
+                          },
+                          {
+                            "variable": "step_755_result_1",
+                            "variable_path": "title"
+                          },
+                          {
+                            "scalar": " is as follows:\n\n\n  - Title: "
+                          },
+                          {
+                            "variable": "step_755_result_1",
+                            "variable_path": "title"
+                          },
+                          {
+                            "scalar": "\n  - Ingredients: "
+                          },
+                          {
+                            "variable": "step_755_result_1",
+                            "variable_path": "ingredients"
+                          },
+                          {
+                            "scalar": "\n  - Servings: "
+                          },
+                          {
+                            "variable": "step_755_result_1",
+                            "variable_path": "servings"
+                          },
+                          {
+                            "scalar": "\n  - Instructions: "
+                          },
+                          {
+                            "variable": "step_755_result_1",
+                            "variable_path": "instructions"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                }
+              ]
+            },
+            "handlers": [],
+            "resolver": {
+              "type": "end_action"
+            },
+            "variable": "step_317"
+          }
+        ],
+        "title": "I want a recipe",
+        "action": "action_47257",
+        "boosts": [],
+        "handlers": [],
+        "condition": {
+          "intent": "action_47257_intent_34846"
+        },
+        "variables": [
+          {
+            "title": "The recipe for {variable} is as follows: - Title: {variable} - I",
+            "privacy": {
+              "enabled": false
+            },
+            "variable": "step_317",
+            "data_type": "any"
+          },
+          {
+            "title": "Sure! Here's what you asked for:",
+            "privacy": {
+              "enabled": false
+            },
+            "variable": "step_755",
+            "data_type": "any"
+          },
+          {
+            "privacy": {
+              "enabled": false
+            },
+            "variable": "step_755_result_1",
+            "data_type": "any"
+          }
+        ],
+        "launch_mode": "learning",
+        "next_action": "fallback",
+        "topic_switch": {
+          "allowed_from": true,
+          "allowed_into": true,
+          "never_return": false
+        },
+        "disambiguation_opt_out": false
+      },
+      {
+        "type": "standard",
+        "steps": [
+          {
+            "step": "step_892",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": "Sure! Retrieving your information:"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                }
+              ]
+            },
+            "context": {
+              "variables": [
+                {
+                  "value": {
+                    "expression": "input.text"
+                  },
+                  "skill_variable": "input_text"
+                }
+              ]
+            },
+            "handlers": [],
+            "resolver": {
+              "type": "callout",
+              "callout": {
+                "path": "/v1/nutrition",
+                "type": "integration_interaction",
+                "method": "GET",
+                "internal": {
+                  "spec_hash_id": "427225de28dc2943405e982b3991225a9b6e110d48787541f7da6935978db3fd",
+                  "catalog_item_id": "d9e45baf-9a50-4f77-9afd-8c860f4bf07d"
+                },
+                "request_mapping": {
+                  "query": [
+                    {
+                      "value": {
+                        "expression": "input.text"
+                      },
+                      "parameter": "query"
+                    }
+                  ]
+                },
+                "result_variable": "step_892_result_1"
+              }
+            },
+            "variable": "step_892",
+            "next_step": "step_834"
+          },
+          {
+            "step": "step_834",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": "The Nutritional Information for "
+                          },
+                          {
+                            "variable": "step_892_result_1",
+                            "variable_path": "body.items[0].name"
+                          },
+                          {
+                            "scalar": " is as follows:\n\nCalories: "
+                          },
+                          {
+                            "variable": "step_892_result_1",
+                            "variable_path": "body.items[0].calories"
+                          },
+                          {
+                            "scalar": " calories\nServing Size: "
+                          },
+                          {
+                            "variable": "step_892_result_1",
+                            "variable_path": "body.items[0].serving_size_g"
+                          },
+                          {
+                            "scalar": "g\nTotal Fat: "
+                          },
+                          {
+                            "variable": "step_892_result_1",
+                            "variable_path": "body.items[0].fat_total_g"
+                          },
+                          {
+                            "scalar": "g\nSaturated Fat: "
+                          },
+                          {
+                            "variable": "step_892_result_1",
+                            "variable_path": "body.items[0].fat_saturated_g"
+                          },
+                          {
+                            "scalar": "g\nProtein: "
+                          },
+                          {
+                            "variable": "step_892_result_1",
+                            "variable_path": "body.items[0].protein_g"
+                          },
+                          {
+                            "scalar": "g\nSodium: "
+                          },
+                          {
+                            "variable": "step_892_result_1",
+                            "variable_path": "body.items[0].sodium_mg"
+                          },
+                          {
+                            "scalar": "mg\nPotassium: "
+                          },
+                          {
+                            "variable": "step_892_result_1",
+                            "variable_path": "body.items[0].potassium_mg"
+                          },
+                          {
+                            "scalar": "mg\nCholesterol: "
+                          },
+                          {
+                            "variable": "step_892_result_1",
+                            "variable_path": "body.items[0].cholesterol_mg"
+                          },
+                          {
+                            "scalar": "mg\nTotal Carbohydrates: "
+                          },
+                          {
+                            "variable": "step_892_result_1",
+                            "variable_path": "body.items[0].carbohydrates_total_g"
+                          },
+                          {
+                            "scalar": "g\nFiber: "
+                          },
+                          {
+                            "variable": "step_892_result_1",
+                            "variable_path": "body.items[0].fiber_g"
+                          },
+                          {
+                            "scalar": "g\nSugar: "
+                          },
+                          {
+                            "variable": "step_892_result_1",
+                            "variable_path": "body.items[0].sugar_g"
+                          },
+                          {
+                            "scalar": " g"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                }
+              ]
+            },
+            "handlers": [],
+            "resolver": {
+              "type": "continue"
+            },
+            "variable": "step_834"
+          }
+        ],
+        "title": "I want nutritional Info",
+        "action": "action_9411",
+        "boosts": [],
+        "handlers": [],
+        "condition": {
+          "intent": "action_9411_intent_30936"
+        },
+        "variables": [
+          {
+            "title": "The Nutritional Information for {variable} is as follows: Calori",
+            "privacy": {
+              "enabled": false
+            },
+            "variable": "step_834",
+            "data_type": "any"
+          },
+          {
+            "title": "Sure! Retrieving your information:",
+            "privacy": {
+              "enabled": false
+            },
+            "variable": "step_892",
+            "data_type": "any"
+          },
+          {
+            "privacy": {
+              "enabled": false
+            },
+            "variable": "step_892_result_1",
+            "data_type": "any"
+          }
+        ],
+        "launch_mode": "learning",
+        "next_action": "action_47257",
+        "topic_switch": {
+          "allowed_from": true,
+          "allowed_into": true,
+          "never_return": false
+        },
+        "disambiguation_opt_out": false
+      },
+      {
+        "type": "standard",
+        "steps": [
+          {
+            "step": "step_985",
+            "handlers": [],
+            "resolver": {
+              "type": "invoke_another_action_and_end",
+              "invoke_action": {
+                "action": null,
+                "policy": "default",
+                "parameters": null,
+                "result_variable": "step_985_result_1"
+              }
+            },
+            "variable": "step_985"
+          }
+        ],
+        "title": "No action matches",
+        "action": "anything_else",
+        "boosts": [],
+        "handlers": [],
+        "condition": {
+          "expression": "anything_else"
+        },
+        "variables": [
+          {
+            "variable": "step_002_result_1",
+            "data_type": "any"
+          },
+          {
+            "title": "No response",
+            "privacy": {
+              "enabled": false
+            },
+            "variable": "step_985",
+            "data_type": "any"
+          },
+          {
+            "privacy": {
+              "enabled": false
+            },
+            "variable": "step_985_result_1",
+            "data_type": "any"
+          }
+        ],
+        "disambiguation_opt_out": false
+      },
+      {
+        "type": "standard",
+        "steps": [
+          {
+            "step": "step_624",
+            "handlers": [],
+            "resolver": {
+              "type": "invoke_another_action_and_end",
+              "invoke_action": {
+                "action": null,
+                "policy": "default",
+                "parameters": null,
+                "result_variable": "step_624_result_1"
+              }
+            },
+            "variable": "step_624"
+          }
+        ],
+        "title": "Fallback",
+        "action": "fallback",
+        "boosts": [],
+        "handlers": [],
+        "condition": {
+          "intent": "fallback_connect_to_agent"
+        },
+        "variables": [
+          {
+            "title": "No response",
+            "privacy": {
+              "enabled": false
+            },
+            "variable": "step_624",
+            "data_type": "any"
+          },
+          {
+            "privacy": {
+              "enabled": false
+            },
+            "variable": "step_624_result_1",
+            "data_type": "any"
+          }
+        ],
+        "next_action": "run_always",
+        "disambiguation_opt_out": true
+      },
+      {
+        "type": "standard",
+        "steps": [
+          {
+            "step": "danger_word_detected",
+            "title": "Connect to agent",
+            "handlers": [],
+            "resolver": {
+              "type": "fallback"
+            },
+            "variable": "danger_word_detected_variable",
+            "condition": {
+              "entity": "danger_words"
+            },
+            "next_step": "profanity_detected"
+          },
+          {
+            "step": "profanity_detected",
+            "title": "Show warning",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": "Please use appropriate language when interacting with the assistant."
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                }
+              ]
+            },
+            "handlers": [
+              {
+                "type": "max_hits",
+                "handler": "max_hits_handler",
+                "resolver": {
+                  "type": "fallback"
+                }
+              }
+            ],
+            "max_hits": 2,
+            "resolver": {
+              "type": "end_action"
+            },
+            "variable": "profanity_detected_variable",
+            "condition": {
+              "entity": "profane_words"
+            }
+          }
+        ],
+        "title": "Trigger word detected",
+        "action": "run_always",
+        "boosts": [],
+        "handlers": [],
+        "variables": [
+          {
+            "title": "Profanity detected",
+            "variable": "danger_word_detected_variable",
+            "data_type": "any"
+          },
+          {
+            "title": "Profane word detected",
+            "variable": "profanity_detected_variable",
+            "data_type": "any"
+          }
+        ],
+        "next_action": "anything_else"
+      },
+      {
+        "type": "standard",
+        "steps": [
+          {
+            "step": "step_001",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text": "Welcome, how can I assist you?"
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                }
+              ]
+            },
+            "handlers": [],
+            "resolver": {
+              "type": "end_action"
+            },
+            "variable": "step_001"
+          }
+        ],
+        "title": "Greet customer",
+        "action": "welcome",
+        "boosts": [],
+        "handlers": [],
+        "condition": {
+          "expression": "welcome"
+        },
+        "variables": [
+          {
+            "variable": "step_001",
+            "data_type": "any"
+          }
+        ],
+        "next_action": "action_15252",
+        "disambiguation_opt_out": true
+      }
+    ],
+    "intents": [
+      {
+        "intent": "action_15252_intent_10728",
+        "examples": [
+          {
+            "text": "I want to workout"
+          }
+        ]
+      },
+      {
+        "intent": "action_47257_intent_34846",
+        "examples": [
+          {
+            "text": "I want a recipe"
+          }
+        ]
+      },
+      {
+        "intent": "action_9411_intent_30936",
+        "examples": [
+          {
+            "text": "I want nutritional Info"
+          }
+        ]
+      },
+      {
+        "intent": "fallback_connect_to_agent",
+        "examples": [
+          {
+            "text": "Agent help"
+          },
+          {
+            "text": "Call agent"
+          },
+          {
+            "text": "Can I connect to an agent?"
+          },
+          {
+            "text": "I would like to speak to a human"
+          },
+          {
+            "text": "I would like to speak to someone"
+          }
+        ],
+        "description": "Please transfer me to an agent"
+      }
+    ],
+    "entities": [
+      {
+        "entity": "danger_words",
+        "values": [],
+        "fuzzy_match": false
+      },
+      {
+        "entity": "entity_14893",
+        "values": [],
+        "fuzzy_match": true
+      },
+      {
+        "entity": "profane_words",
+        "values": [],
+        "fuzzy_match": false
+      },
+      {
+        "entity": "sys-yes-no",
+        "values": []
+      }
+    ],
+    "metadata": {
+      "api_version": {
+        "major_version": "v2",
+        "minor_version": "2018-11-08"
+      }
+    },
+    "variables": [
+      {
+        "title": "age",
+        "privacy": {
+          "enabled": false
+        },
+        "variable": "age",
+        "data_type": "number",
+        "description": ""
+      },
+      {
+        "title": "difficulty",
+        "privacy": {
+          "enabled": false
+        },
+        "variable": "difficulty",
+        "data_type": "string",
+        "description": ""
+      },
+      {
+        "title": "gender",
+        "privacy": {
+          "enabled": false
+        },
+        "variable": "gender",
+        "data_type": "string",
+        "description": ""
+      },
+      {
+        "title": "height",
+        "privacy": {
+          "enabled": false
+        },
+        "variable": "height",
+        "data_type": "number",
+        "description": ""
+      },
+      {
+        "title": "input-text",
+        "privacy": {
+          "enabled": false
+        },
+        "variable": "input_text",
+        "data_type": "string",
+        "description": "",
+        "initial_value": {
+          "scalar": "input.text"
+        }
+      },
+      {
+        "title": "men_maintenance_calories",
+        "privacy": {
+          "enabled": false
+        },
+        "variable": "men_maintenance_calories",
+        "data_type": "number",
+        "description": ""
+      },
+      {
+        "title": "muscle",
+        "privacy": {
+          "enabled": false
+        },
+        "variable": "muscle",
+        "data_type": "string",
+        "description": ""
+      },
+      {
+        "title": "selected_type",
+        "privacy": {
+          "enabled": false
+        },
+        "variable": "selected_type",
+        "data_type": "string",
+        "description": ""
+      },
+      {
+        "title": "select_type",
+        "privacy": {
+          "enabled": false
+        },
+        "variable": "select_type",
+        "data_type": "string",
+        "description": ""
+      },
+      {
+        "title": "snippet",
+        "privacy": {
+          "enabled": false
+        },
+        "variable": "snippet",
+        "data_type": "any",
+        "description": ""
+      },
+      {
+        "title": "title",
+        "privacy": {
+          "enabled": false
+        },
+        "variable": "title",
+        "data_type": "any",
+        "description": ""
+      },
+      {
+        "title": "type",
+        "variable": "type",
+        "data_type": "string",
+        "description": ""
+      },
+      {
+        "title": "weight",
+        "privacy": {
+          "enabled": false
+        },
+        "variable": "weight",
+        "data_type": "number",
+        "description": ""
+      }
+    ],
+    "data_types": [
+      {
+        "title": "Nutritional information",
+        "entity": "entity_14893",
+        "response": {
+          "options": [],
+          "response_type": "option"
+        },
+        "data_type": "data-type_18203"
+      }
+    ],
+    "collections": [],
+    "counterexamples": [],
+    "system_settings": {
+      "nlp": {
+        "model": "beta"
+      },
+      "variable": {
+        "format": {
+          "time": {
+            "pattern": "short"
+          },
+          "currency": {
+            "fraction_digits": 2
+          }
+        }
+      },
+      "off_topic": {
+        "enabled": true
+      },
+      "auto_learn": {
+        "apply": true
+      },
+      "launch_mode": {
+        "default": "learning",
+        "enabled": true,
+        "learning": {
+          "step_retry_threshold": 2,
+          "use_connect_to_support": "more_often",
+          "single_answer_clarification": "more_often",
+          "disambiguation_clarification": "more_often"
+        },
+        "confident": {
+          "step_retry_threshold": 4,
+          "use_connect_to_support": "sometimes",
+          "single_answer_clarification": "sometimes",
+          "disambiguation_clarification": "sometimes"
+        }
+      },
+      "topic_switch": {
+        "enabled": true,
+        "messages": {
+          "enable_confirmation": true,
+          "confirmation_failure": {
+            "generic": [
+              {
+                "values": [
+                  {
+                    "text_expression": {
+                      "concat": [
+                        {
+                          "scalar": "I'm sorry, I did not catch that, please confirm."
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "response_type": "text",
+                "selection_policy": "sequential"
+              }
+            ]
+          },
+          "confirmation_request": {
+            "generic": [
+              {
+                "values": [
+                  {
+                    "text_expression": {
+                      "concat": [
+                        {
+                          "scalar": "Do you want to continue with the previous topic: "
+                        },
+                        {
+                          "system_variable": "digressed_from"
+                        },
+                        {
+                          "scalar": "?"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "response_type": "text",
+                "selection_policy": "sequential"
+              },
+              {
+                "options": [
+                  {
+                    "label": "Yes",
+                    "value": {
+                      "input": {
+                        "text": "Yes"
+                      }
+                    }
+                  },
+                  {
+                    "label": "No",
+                    "value": {
+                      "input": {
+                        "text": "No"
+                      }
+                    }
+                  }
+                ],
+                "response_type": "option",
+                "repeat_on_reprompt": true
+              }
+            ]
+          }
+        },
+        "max_tries": 3,
+        "digression_handler": "main skill"
+      },
+      "generative_ai": {
+        "slot_filling": {
+          "enabled": false
+        }
+      },
+      "disambiguation": {
+        "prompt": "Did you mean:",
+        "enabled": true,
+        "randomize": true,
+        "max_suggestions": 5,
+        "suggestion_text_policy": "title",
+        "none_of_the_above_prompt": "None of the above",
+        "use_connect_to_support_prompt": "Connect to support",
+        "single_answer_clarification_prompt": "Something else"
+      },
+      "spelling_auto_correct": true
+    },
+    "learning_opt_out": false
+  },
+  "description": "created for assistant 48db9e3f-baa9-4114-ab76-ae7ae0f230fa",
+  "assistant_id": "48db9e3f-baa9-4114-ab76-ae7ae0f230fa",
+  "workspace_id": "5b6f96b6-f4ef-42b8-8eb7-c843809a6c41",
+  "dialog_settings": {},
+  "next_snapshot_version": "1",
+  "environment_id": "f584e5f2-5592-426f-8e0c-ea3e08b46394"
+}
